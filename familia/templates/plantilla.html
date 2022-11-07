@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Familiares</title>
+</head>
+
+<body>
+    <h1>Mi familia</h1>
+
+    <style>
+        .tb { border-collapse: collapse;}
+        .tb th,.tb td { padding: 5px; border: solid 1px #777;}
+        .tb th { background-color: lightblue; }
+    </style>
+
+    <table class="tb" style="width:300px;">
+        <tbody> 
+
+            {% for integrantes in familiares_base %} 
+            
+            <tr>
+                <td>{{integrantes.nombre}}</td>
+                <td>{{integrantes.apellido|upper}}</td>
+                <td>{{integrantes.numero}}</td>
+                <td>{{integrantes.nacimiento}}</td>
+                
+            </tr> 
+            {% endfor %} 
+        </tbody>
+    </table>
+</body>
+
+</html>
